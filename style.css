@@ -27,10 +27,10 @@ body {
 }
 
 .nav-bar .links a {
-  padding-left: 20px;
+  margin-left: 20px;
   text-decoration: none;
   color: #243635;
-  font-size: 10px;
+  font-size: 14px;
   transition: all ease-in 0.2s;
 }
 .nav-bar .links a:hover {
@@ -42,7 +42,7 @@ body {
 }
 
 .first-section {
-  margin-top: 15%;
+  margin-top: 16%;
   text-align: center;
   position: relative;
 }
@@ -56,57 +56,89 @@ body {
 
 .first-section .first-title h1 {
   font-family: "Dancing Script";
-  font-size: 2.4rem;
+  font-size: 2.8rem;
   font-weight: bold;
   color: #18acb6;
 }
 .first-section .first-title p {
   font-family: "Dancing Script";
-  font-size: 16px;
+  font-size: 18px;
   color: #18acb6;
   padding-top: 1rem;
 }
 
 .first-section .images {
   position: relative;
-  margin-top: 10%;
+  margin-top: 5%;
 }
 
 .first-section .images .cloud {
   position: absolute;
   width: 90px;
+  filter: drop-shadow(0px 10px 3px #dddddd);
+
 }
 
 .first-section .images .cloud-1 {
   top: -30%;
   left: 9%;
+  animation: clouds 1.3s alternate infinite;
+
 }
 .first-section .images .cloud-2 {
   top: -45%;
   right: 9%;
+  animation: clouds 1.3s alternate infinite;
 }
 .first-section .images .mountian {
-  width: 270px;
+  width: 335px;
+  filter: drop-shadow(0px 10px 15px #a3e2ff);
+}
+
+.second-section {
+  text-align: center;
+}
+
+.second-section .second-title h2 {
+  color: #18acb6;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #18acb6;
+  width: 150px;
+  margin: auto;
+}
+
+.second-section .content p {
+  font-size: 15px;
+  padding: 1.5rem;
+  color: #707070;
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.4rem;
 }
 
 @media screen and (min-width: 768px) {
+
+  .first-section {
+    margin-top: 10%;
+  }
+
   .nav-bar .links a {
     padding-left: 20px;
     text-decoration: none;
     color: #243635;
-    font-size: 14px;
+    font-size: 17px;
     transition: all ease-in 0.2s;
   }
 
   .first-section .first-title h1 {
     font-family: "Dancing Script";
-    font-size: 2.8rem;
+    font-size: 4.5rem;
     font-weight: bold;
     color: #18acb6;
   }
   .first-section .first-title p {
     font-family: "Dancing Script";
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     color: #18acb6;
     padding-top: 1rem;
   }
@@ -126,25 +158,31 @@ body {
   .first-section .images .mountian {
     width: 50%;
   }
+
+  .second-section .content p {
+    width: 60%;
+    margin: auto;
+    font-size: 16px;
+    line-height: 1.6rem;
+  }
+  .first-section .images .cloud-1 {
+    animation: clouds 1.3s alternate infinite;
+  
+  }
+  .first-section .images .cloud-2 {
+    animation: clouds 1.3s alternate infinite;
+  }
 }
 
-.second-section {
-  text-align: center;
+
+@keyframes clouds {
+  0%{
+    transform: translateY(0px);
+  }
+   100%{
+    transform: translateY(30px);
+  }
 }
 
-.second-section .second-title h2 {
-  color: #18acb6;
-  padding-bottom: .5rem;
-  border-bottom: 2px solid #18acb6;
-  width: 150px;
-  margin: auto;
-}
 
-.second-section .content p{
-  font-size: 15px;
-  padding: 1.5rem;
-  color: #707070;
-  text-align: justify;
-  text-justify: inter-word;
-  line-height: 1.4rem;
-}
+
